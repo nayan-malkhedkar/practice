@@ -10,7 +10,6 @@ DB_URL = os.getenv("DATABASE_URL")
 def get_connection():
     try:
         conn = psycopg2.connect(DB_URL)
-        print("Connection established")
         return conn
     except Exception as e:
         print("Connection failed:", e)
